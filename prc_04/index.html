@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
+  <title>Vue.jsのサンプル</title>
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="shuffle">shuffle</button>
+    <transition-group name="flip-list" tag="ul">
+      <li v-for="pref in prefs" v-bind:key="pref.name">
+        {{ pref.name }}
+      </li>
+    </transition-group>
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
